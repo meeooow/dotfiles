@@ -33,13 +33,15 @@ font pango:Clear Sans 10
 ########## Autolaunch ##########
 exec --no-startup-id nm-applet
 exec --no-startup-id /usr/lib64/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id compton -i .85 -cCzG -t-3 -l-5 -r4 \
- --config /dev/null --backend xrender \
- --unredir-if-possible
+exec --no-startup-id compton -i .85 --active-opacity 0.90 -cCzG -t-3 -l-5 -r4 --config /dev/null --backend xrender --unredir-if-possible
 exec --no-startup-id nitrogen --restore &
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 ########## Keybindings ##########
+
+bindsym Mod4+o exec pkill compton && compton -i .85 --active-opacity 0.90 -cCzG -t-3 -l-5 -r4 --config /dev/null --backend xrender --unredir-if-possible & i3-msg restart
+bindsym Mod4+p exec pkill compton && compton -i .85 --active-opacity 1.00 -cCzG -t-3 -l-5 -r4 --config /dev/null --backend xrender --unredir-if-possible & i3-msg restart
+
 bindsym Mod4+Shift+s exec i3lock # Easier locking
 
 ### Backlight ###
