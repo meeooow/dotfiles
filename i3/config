@@ -232,7 +232,7 @@ bindsym Mod4+r mode "resize"
 
 client.focused          #404552 #404552 #fafafa #5C627C #5C627C
 client.focused_inactive #666666 #404552 #eeeeee #666666 #666666
-client.unfocused        #404552 #484b52 #eeeeee #ff5757 #404552
+client.unfocused        #404552 #484b52 #eeeeee #ff5757 #000000
 client.urgent           #ff5757 #404552 #ffffff #555757 #404552
 client.background       #404552
 
