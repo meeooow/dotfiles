@@ -9,14 +9,19 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #222
-background-alt = #444
+background = #000
+background-alt = #111
 ;foreground = ${xrdb:color7:#222}
-foreground = #dfdfdf
-foreground-alt = #dfdfdf
-primary = #0a81f5
-secondary = #e60053
+foreground = #fff
+foreground-alt = #ddd
+primary = #F12570
+secondary = #F12570
 alert = #bd2c40
+memory = #00b0ef
+cpu = #F12570
+temperature = #00b0ef
+clock = #50FA7B
+ip = #00b0ef
 
 [bar/bar]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -33,8 +38,8 @@ foreground = ${colors.foreground}
 line-size = 3
 line-color = #f00
 
-border-size = 0
-border-color = #00000000
+border-bottom-size = 0
+border-color = #222
 
 padding-left = 0
 padding-right = 2
@@ -42,15 +47,18 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
+;font-0 = Noto Sans:size=10:antialias=true;0				# Main
+;font-1 = Noto Sans Symbols:size=10:antialias=true;0 # Emoji + support
 font-0 = fixed:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 font-3 = FontAwesome5Free:style=Solid:pixelsize=10:antialias=false;3
 font-4 = FontAwesome5Brands:style=Solid:pixelsize=10:antialias=false;3
+font-5 = M+ 1mn:style=bold:pixelsize=11;1
 
 modules-left = bspwm i3
 modules-center = mpd
-modules-right = filesystem volume xkeyboard memory cpu temperature date eth powermenu
+modules-right = volume memory cpu temperature date eth powermenu
 
 tray-position = right
 tray-padding = 2
@@ -97,7 +105,7 @@ interval = 25
 
 mount-0 = /
 
-label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
+label-mounted = %{F#FF5555}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -105,7 +113,7 @@ label-unmounted-foreground = ${colors.foreground-alt}
 type = internal/bspwm
 
 label-focused = %index%
-label-focused-background = ${colors.background-alt}
+label-focused-background = #000
 label-focused-underline= ${colors.primary}
 label-focused-padding = 2
 
@@ -126,21 +134,33 @@ format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
 
+ws-icon-0 = 1;一
+ws-icon-1 = 2;二
+ws-icon-2 = 3;三
+ws-icon-3 = 4;四
+ws-icon-4 = 5;五
+ws-icon-5 = 6;六
+ws-icon-6 = 7;七
+ws-icon-7 = 8;八
+ws-icon-8 = 9;九
+ws-icon-9 = 10;十
+
 ; Only show workspaces on the same output as the bar
 ;pin-workspaces = true
 
 label-mode-padding = 2
-label-mode-foreground = #000
+label-mode-foreground = #fff
 label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
-label-focused = %index%
+label-focused = %{F-}%icon%
 label-focused-background = ${module/bspwm.label-focused-background}
 label-focused-underline = ${module/bspwm.label-focused-underline}
 label-focused-padding = ${module/bspwm.label-focused-padding}
 
 ; unfocused = Inactive workspace on any monitor
-label-unfocused = %index%
+label-unfocused = %{F#F12570}%icon%
+;label-unfocused-underline = ${module/bspwm.label-focused-underline}
 label-unfocused-padding = ${module/bspwm.label-occupied-padding}
 
 ; visible = Active workspace on unfocused monitor
@@ -192,18 +212,18 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
+format-prefix = ""
+format-prefix-foreground = ${colors.cpu}
 ;format-underline = #f90000
-label = %percentage%%
+label = %{F#F12570} %percentage%%
 
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
+format-prefix = ""
+format-prefix-foreground = ${colors.memory}
 ;format-underline = #4bffdc
-label = %percentage_used%%
+label = %{F#00b0ef} %percentage_used%%
 
 [module/wlan]
 type = internal/network
@@ -233,9 +253,9 @@ interface = enp0s25
 interval = 3.0
 
 ;format-connected-underline = #55aa55
-format-connected-prefix = " "
-format-connected-prefix-foreground = ${colors.foreground-alt}
-label-connected = %local_ip%
+format-connected-prefix = ""
+format-connected-prefix-foreground = ${colors.ip}
+label-connected = %{F#00b0ef} %local_ip%
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
@@ -247,14 +267,14 @@ format-disconnected =
 type = internal/date
 interval = 5
 
-date = "%H:%M"
-date-alt = "%d.%m.%Y - %H:%M:%S"
+date = "%{F#50FA7B} %H:%M"
+date-alt = "%{F#50FA7B} %d.%m.%Y - %H:%M:%S"
 
 #time = %H:%M
 #time-alt = %H:%M:%S
 
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
+format-prefix = ""
+format-prefix-foreground = ${colors.clock}
 ;format-underline = #0a6cf5
 
 label = %date% %time%Uhr
@@ -264,26 +284,26 @@ type = internal/volume
 
 format-volume = <label-volume> <bar-volume>
 label-volume = " "
-label-volume-foreground = ${root.foreground}
+label-volume-foreground = ${xrdb:root.foreground:#50FA7B}
 
 format-muted-prefix = " "
 format-muted-foreground = ${colors.foreground-alt}
 label-muted = sound muted
 
 bar-volume-width = 10
-bar-volume-foreground-0 = #0a81f5
-bar-volume-foreground-1 = #0a81f5
-bar-volume-foreground-2 = #0a81f5
-bar-volume-foreground-3 = #0a81f5
-bar-volume-foreground-4 = #0a81f5
-bar-volume-foreground-5 = #0a81f5
-bar-volume-foreground-6 = #0a81f5
+bar-volume-foreground-0 = #50FA7B
+bar-volume-foreground-1 = #50FA7B
+bar-volume-foreground-2 = #50FA7B
+bar-volume-foreground-3 = #50FA7B
+bar-volume-foreground-4 = #50FA7B
+bar-volume-foreground-5 = #50FA7B
+bar-volume-foreground-6 = #50FA7B
 bar-volume-gradient = false
-bar-volume-indicator = |
+bar-volume-indicator = 
 bar-volume-indicator-font = 2
-bar-volume-fill = ─
+bar-volume-fill = 
 bar-volume-fill-font = 2
-bar-volume-empty = ─
+bar-volume-empty = 
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground-alt}
 
@@ -299,7 +319,7 @@ format-charging-underline = #ffb52a
 format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
-format-full-prefix = " "
+format-full-prefix = ""
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
 
@@ -317,21 +337,21 @@ animation-charging-framerate = 750
 [module/temperature]
 type = internal/temperature
 thermal-zone = 0
-warn-temperature = 60
+warn-temperature = 0
 
 format = <ramp><label>
 ;format-underline = #f50a4d
-format-warn = <ramp><label-warn>
+format-warn = %{F#FF8C00}<ramp><label-warn>
 ;format-warn-underline = ${self.format-underline}
 
-label = %temperature%
-label-warn = %temperature%
-label-warn-foreground = ${colors.secondary}
+label = " %temperature%"
+label-warn = " %temperature%"
+label-warn-foreground = #FF8C00
 
-ramp-0 = " "
-ramp-1 = " "
-ramp-2 = " "
-ramp-foreground = ${colors.foreground-alt}
+ramp-0 = ""
+ramp-1 = ""
+ramp-2 = ""
+;ramp-foreground = #fff
 
 [module/powermenu]
 type = custom/menu
