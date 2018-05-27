@@ -117,9 +117,10 @@ label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
-;label-urgent = %index%
-;label-urgent-background = #bd2c40
-;label-urgent-padding = 2
+label-urgent = %icon%
+label-urgent-foreground = ${colors.lightblue}
+label-urgent-background = ${colors.black}
+label-urgent-padding = 2
 
 [module/cpu]
 type = internal/cpu
