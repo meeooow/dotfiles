@@ -1,6 +1,10 @@
 # dotfiles
 .files for my linux desktop setup
 
+![SHOWCASE](https://raw.githubusercontent.com/xyiii/dotfiles/master/showcase.png)
+
+![SHOWCASE_DAILY](https://raw.githubusercontent.com/xyiii/dotfiles/master/showcase_daily.png)
+
 Theme used: Adwaita Dark
 
 Icons used: https://github.com/keeferrourke/la-capitaine-icon-theme
