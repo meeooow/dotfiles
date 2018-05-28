@@ -152,11 +152,11 @@ interface = enp0s25
 interval = 3.0
 
 format-connected = <label-connected>
-format-connected-prefix = 
+format-connected-prefix = 
 label-connected = %local_ip%
 
 format-disconnected = <label-disconnected>
-format-disconnected-prefix = 
+format-disconnected-prefix = 
 label-disconnected = %ifname%: nicht verbunden
 
 format-connected-foreground = ${colors.lightblue}
