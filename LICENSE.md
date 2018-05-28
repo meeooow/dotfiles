@@ -1,6 +1,7 @@
 The MIT License (MIT)
 
 Copyright (c) for networkmanager-dmenu are held by Scott Hansen, 2017.
+
 All other copyright (c) are held by Daniel Schwarzkopf, 2018.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
