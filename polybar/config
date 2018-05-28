@@ -54,10 +54,10 @@ font-4 = M+ 1mn:style=bold:pixelsize=11;1
 
 modules-left = i3
 ;modules-center = mpd
-modules-right = volume memory cpu temperature date eth powermenu
+modules-right = volume memory cpu temperature date network-connection powermenu
 
-tray-position = right
-tray-padding = 2
+;tray-position = right
+;tray-padding = 2
 ;tray-transparent = true
 ;tray-background = #0063ff
 
@@ -270,6 +270,14 @@ menu-1-0-foreground = ${colors.lightgrey}
 menu-1-1-foreground = ${colors.lightblue}
 menu-2-0-foreground = ${colors.lightred}
 menu-2-1-foreground = ${colors.lightgrey}
+
+[module/network-connection]
+type = custom/script
+exec = ~/.config/polybar/network-connection.sh
+interval = 5
+
+format = <label>
+format-foreground = ${colors.lightblue}
 
 [settings]
 screenchange-reload = true
