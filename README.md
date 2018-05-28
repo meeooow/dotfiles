@@ -1,4 +1,6 @@
 # dotfiles
 .files for my linux desktop setup
 
-Theme used: https://www.gnome-look.org/p/1173113/
+Theme used: Adwaita Dark
+Icons used: https://github.com/keeferrourke/la-capitaine-icon-theme
+Wallpaper used: https://imgur.com/a/2PqQchP
