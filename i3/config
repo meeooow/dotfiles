@@ -234,7 +234,7 @@ for_window [class="Nm-connection-editor"] floating enable
 
 smart_borders no_gaps
 #smart_gaps on
-gaps inner 5
+gaps inner 50
 gaps outer 0
 
 client.focused #00b0ef #00b0ef #141414 #ff7066
