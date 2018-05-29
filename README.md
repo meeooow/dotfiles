@@ -16,7 +16,9 @@ Wallpaper used: https://imgur.com/a/2PqQchP
 ### dotfiles folders
 
 ~/.local/share/themes
+
 ~/.local/share/icons
+
 ~/.local/share/fonts/truetype
 
-~/.config/
+~/.config
