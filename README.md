@@ -21,4 +21,4 @@ Wallpaper used: https://imgur.com/a/2PqQchP
 
 ~/.local/share/fonts/truetype
 
-~/.config
+~/.config/(i3|polybar|dunst|rofi|networkmanager-dmenu)
