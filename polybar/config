@@ -24,7 +24,7 @@ adjust-icon = 2
 module-spacing = 4
 
 [bar/bar]
-;monitor = ${env:MONITOR:HDMI-1}
+monitor = ${env:MONITOR:}
 width = 100%
 height = 32
 ;offset-x = 1%
@@ -114,7 +114,7 @@ label-unfocused-foreground = ${colors.lightred}
 ; visible = Active workspace on unfocused monitor
 label-visible = %icon%
 label-visible-background = ${self.label-focused-background}
-label-visible-underline = ${self.label-focused-underline}
+;label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
