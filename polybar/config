@@ -1,11 +1,4 @@
-;=====================================================
-;
-;   To learn more about how to configure Polybar
-;   go to https://github.com/jaagr/polybar
-;
-;   The README contains alot of information
-;
-;=====================================================
+; ~/.config/polybar/config
 
 [colors]
 black = #000
@@ -56,11 +49,6 @@ font-4 = M+ 1mn:style=bold:pixelsize=11;1
 modules-left = i3
 ;modules-center = mpd
 modules-right = volume memory cpu temperature date network-connection powermenu
-
-;tray-position = right
-;tray-padding = 2
-;tray-transparent = true
-;tray-background = #0063ff
 
 ;wm-restack = i3
 
@@ -146,25 +134,6 @@ label = %percentage_used%
 format-foreground = ${colors.lightblue}
 
 format-prefix-margin-right = ${spacing.adjust-icon}
-
-[module/eth]
-type = internal/network
-interface = enp0s25
-interval = 3.0
-
-format-connected = <label-connected>
-format-connected-prefix = 
-label-connected = %local_ip%
-
-format-disconnected = <label-disconnected>
-format-disconnected-prefix = 
-label-disconnected = %ifname%: nicht verbunden
-
-format-connected-foreground = ${colors.lightblue}
-format-disconnected-foreground = ${colors.lightblue}
-
-format-connected-prefix-margin-right = ${spacing.adjust-icon}
-format-disconnected-prefix-margin-right = ${spacing.adjust-icon}
 
 [module/date]
 type = internal/date
