@@ -1,7 +1,7 @@
 # dotfiles
 .files for my linux desktop setup
 
-![SHOWCASE](https://raw.githubusercontent.com/xyiii/dotfiles/master/showcase.png)
+![SHOWCASE](https://raw.githubusercontent.com/meeooww/dotfiles/master/showcase.png)
 
 Theme used: Adwaita Dark
 
