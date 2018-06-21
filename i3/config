@@ -20,6 +20,8 @@ exec --no-startup-id nitrogen --restore &
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # Fix the monitor settings
 exec --no-startup-id xrandr --output DP-1 --primary --mode 1920x1080 --refresh 144 --left-of DVI-I-1
+# Fix tearing using compton
+exec --no-startup-id compton -b --paint-on-overlay --unredir-if-possible --backend xr_glx_hybrid --vsync drm --glx-swap-method -1 --glx-no-stencil -i 0.85
 
 ########## Keybindings ##########
 # Easier locking
