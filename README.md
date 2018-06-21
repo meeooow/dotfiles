@@ -24,7 +24,7 @@ Wallpaper used: https://imgur.com/a/2PqQchP
 ### My personal PS1
 
 ```bash
-export PS1="\[\033[38;5;197m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;221m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\] \\$ \[$(tput sgr0)\]\e[38;5;221m"
+export PS1="\[\033[38;5;197m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;221m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\] \\$ \[$(tput sgr0)\]\[\033[38;5;221m\]"
 ```
 
 ### neofetch colors
