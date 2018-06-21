@@ -28,3 +28,9 @@ Wallpaper used: https://imgur.com/a/2PqQchP
 ```bash
 export PS1="\[\033[38;5;197m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;221m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\] \\$ \[$(tput sgr0)\]\e[38;5;221m"
 ```
+
+### neofetch colors
+
+```bash
+colors=(197 15 221 197 15 221)
+```
