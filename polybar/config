@@ -200,8 +200,8 @@ ramp-2 = 
 ramp-3 = 
 ramp-4 = 
 
-format-foreground = ${colors.lightorange}
-format-warn-foreground = ${colors.lightorange}
+format-foreground = ${colors.lightyellow}
+format-warn-foreground = ${colors.lightyellow}
 
 ramp-margin-right = ${spacing.adjust-icon}
 
