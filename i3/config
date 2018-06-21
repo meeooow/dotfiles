@@ -18,6 +18,8 @@ exec --no-startup-id /usr/lib64/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore &
 # Start polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+# Fix the monitor settings
+exec --no-startup-id xrandr --output DP-1 --primary --mode 1920x1080 --refresh 144 --left-of DVI-I-1
 
 ########## Keybindings ##########
 # Easier locking
