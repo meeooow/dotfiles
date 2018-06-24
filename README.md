@@ -30,5 +30,5 @@ export PS1="\[\033[01;38;5;147m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sg
 ### neofetch colors
 
 ```bash
-colors=(197 15 221 197 15 221)
+colors=(75 147 147 75 15 147)
 ```
