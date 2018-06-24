@@ -21,7 +21,7 @@ Wallpaper used: https://imgur.com/a/2PqQchP
 
 ~/.config/(i3|polybar|dunst|rofi|networkmanager-dmenu)
 
-### My personal PS1
+### My personal PS1 config
 
 ```bash
 export PS1="\[\033[01;38;5;147m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[01;38;5;75m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[01;38;5;15m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[01;38;5;75m\]"
