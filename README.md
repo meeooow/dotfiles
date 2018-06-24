@@ -8,6 +8,7 @@ Theme used: Adwaita Dark
 Icons used: https://github.com/keeferrourke/la-capitaine-icon-theme
 
 Old wallpaper: https://imgur.com/a/2PqQchP
+
 New wallpaper: https://wallhalla.com/wallpaper/xYlagxLied5
 
 ## Additional Information
